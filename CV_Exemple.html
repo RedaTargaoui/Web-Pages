@@ -20,6 +20,19 @@
   }
   a{
     text-decoration: none;
+    font-size: 20px;
+    color: #D1B000
+    background-color: black
+    background: linear-gradient(to right, black  50%, #D1B000 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+  }
+  a:hover{
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    padding: 8px 10px;
   }
   ul{
     list-style: none;
@@ -29,7 +42,6 @@
     font-size: 20px;
     font-weight: 500;
     color: black;
-    text-decoration: underline;
   }
   #banner{
     height: 100vh;
@@ -38,9 +50,57 @@
     background-position: center;
     background-attachment: fixed;
   }
+  .icon::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: white;
+    transition: 300ms;
+  }
+  .icon:hover::after {
+    margin-left: 0%;
+    width: 40%;
+  }
+  .about::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: black;
+    transition: 300ms;
+  }
+  .about:hover::after {
+    margin-left: 52%;
+    width: 20%;
+  }
+  .get_know::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: black;
+    transition: 300ms;
+  }
+  .get_know:hover::after {
+    margin-left: 0%;
+    width: 40%;
+  }
+  #title::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: black;
+    transition: 300ms;
+  }
+  #title:hover::after {
+    margin-left: 0%;
+    width: 100%;
+  }
 </style>
 <body class="w3-light-grey">
-  <header class="w3-white">
+  <header class="w3-white" style="position: fixed; width: 100%;">
     <div class="content">
       <p id="title">TARGAOUI soufian</p>
       <ul>
@@ -52,15 +112,15 @@
   </header>
   <div id="banner" class="w3-text-white">
     <p style="margin-left: 45%; margin-top: 0px; font-size: 40px; font-weight: 1000;"><br>Welcome <br><br>Bienvenue</p>
-    <p style="margin-left: 50%; margin-top: 25px; font-size: 30px;"><i class="fa fa-github" aria-hidden="true"></i> Targaoui soufian</p>
-    <p style="margin-left: 50%; font-size: 30px;"><i class="fa fa-envelope" aria-hidden="true"></i> Targaoui soufian</p>
-    <p style="margin-left: 50%; font-size: 30px;"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Targaoui soufian</p>
+    <p class="icon" style="margin-left: 50%; margin-top: 25px; font-size: 30px;"><i class="fa fa-github" aria-hidden="true"></i> Targaoui soufian</p>
+    <p class="icon" style="margin-left: 50%; font-size: 30px;"><i class="fa fa-envelope" aria-hidden="true"></i> Targaoui soufian</p>
+    <p class="icon" style="margin-left: 50%; font-size: 30px;"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Targaoui soufian</p>
   </div>
   <div style="margin-top: 80px;">
     <p><br><br></p>
     <img src="https://bouhmid-zakaria.web.app/img/emb.jpg" style="width: 35%; margin-left: 15%; float: left;margin-top: 10px; margin-right: 20px;">
     <div style="display: inline; margin-left: 60%;">
-       <h1 style=" font-size: 60px;">About me</h1>
+       <h1 class="about" style=" font-size: 60px;">About me</h1>
        <p style=" font-size: 20px; color: grey;">A learn-it-all, thinker, doer.<br>I have passion for embedded <br>systems, mobile and web <br>development, Machine Learning and <br>Artificial Intelligence.<br> <br> <br></p>
        <a style="margin-left: 52%; border-radius: 4px; padding: 8px 20px; border: 1px solid lightgrey; " href="#About">Read More</a>
        <p><br></p>
@@ -79,7 +139,7 @@
     <p><br><br><br></p>
     <img style="border-radius: 50%; margin-left: 10%; height: 500px; float: left;" src="https://media-exp1.licdn.com/dms/image/C5603AQEnGMofSqsyYw/profile-displayphoto-shrink_200_200/0/1574884722986?e=1614816000&v=beta&t=jRd77j77WMczfpw-ZaGmipAZGzKUPlWNiWo-BSs89XI">
     <div style="display: inline;" id="About">
-      <h1 style="margin-left: 52%; margin-top: 60px;">Get To Know Me</h1>
+      <h1 style="margin-left: 52%; margin-top: 60px;" class="get_know">Get To Know Me</h1>
       <p style="color: grey; margin-left: 52%; font-size: 20px;">Hi, my name is Soufian. I am a engineering<br> student who loves learning about new<br> technologies and working on challenging<br>projects.<br>I am very motivated to push myself to the<br> limits.<br><br><a style=" border-radius: 4px; padding: 8px 20px; border: 1px solid lightgrey;" href="file:///C:/Users/admin/Downloads/CV_Soufian_TARGAOUI.pdf">CV En Français</a>
       <a style=" border-radius: 4px; padding: 8px 20px; border: 1px solid lightgrey;" href="file:///C:/Users/admin/Downloads/CV_Soufian_Targaoui%20(1).pdf">CV In English</a></p>
     </div>
@@ -89,7 +149,7 @@
   </div>
   <div style="background-color: #2B3856; height: 100px;">
     <p><br></p>
-    <h1 class="w3-center">Professional Experience : </h1>
+    <h1 class="w3-center" class="exp">Professional Experience : </h1>
   </div>
   <div>
     <p><br><br><br></p>
