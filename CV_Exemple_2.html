@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<title>Reda CV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+  nav .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav ul{
+    display: inline-flex;
+  }
+  ul li a{
+    margin-right: 60px;
+    margin-left: 40px;
+  }
+  #intro::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: black;
+    transition: 300ms;
+  }
+  #intro:hover::after {
+    margin-left: 38%;
+    width: 20%;
+  }
+  #about::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: #D1B000 ;
+    transition: 300ms;
+  }
+  #about:hover::after {
+    margin-left: 35%;
+    width: 26%;
+  }
+  #contact::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: black;
+    transition: 300ms;
+  }
+  #contact:hover::after {
+    margin-left: 40%;
+    width: 20%;
+  }
+  .icon::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: black;
+    transition: 300ms;
+  }
+  .icon:hover::after {
+    margin-left: 40%;
+    width: 20%;
+  }
+  a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #D1B000
+    background-color: black
+    background: linear-gradient(to right, black  50%, #D1B000 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+  }
+  ul{
+    list-style: none;
+  }
+  a:hover{
+    border-radius: 4px;
+    background-color: #D1B000;
+    color: black;
+    padding: 8px 10px;
+  }
+  .read{
+    border-radius: 4px; 
+    color: #D1B000;
+    background-color: black;
+    margin-left: 45%;
+    padding: 8px 20px;
+  }
+</style>
+<body style="background-color: #D1B000;">
+  <nav style="background-color: black;" id="top">
+    <div class="content">
+      <div><img style="width: 15%; margin-left: 40px; margin-top: 20px; margin-bottom: 20px;" src="https://png.pngtree.com/element_our/png_detail/20181008/cv-logo-template-with-gold-colors-isolated-on-black-background-png_130994.jpg"></div>
+      <ul style="color: #D1B000;">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div style="background-color: #D1B000;">
+    <img style="width: 30%; float: left;margin-top: 65px; margin-left: 30px; margin-right: 70px;" src="https://bouhmid-zakaria.web.app/img/emb.jpg">
+    <div style="display: inline; ">
+        <h1 style="margin-top: 8%; font-size: 40px; font-weight: 1000;" id="intro">Introduction : </h1>
+        <p style=" font-size: 40px;">A learn-it-all, thinker, doer.I have passion for embedded systems, mobile and web development, Machine Learning and Artificial Intelligence.</p>
+    </div>
+    <a class="read" href="#about">About Me </a>
+  </div>
+  <div style="background-color: black; color: #D1B000;">
+    <img style="width: 27%; border-radius: 50%; float: left; margin-top: 65px; margin-left: 30px; margin-right: 70px;" src="https://scontent-mrs2-2.xx.fbcdn.net/v/t1.0-9/36956192_883677101821177_8282181420529483776_n.jpg?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=Kgu1Ft040sYAX-UOs__&_nc_ht=scontent-mrs2-2.xx&oh=bec9549bf87cc36e4b8c54a6ae5e7af4&oe=60329F14">
+    <div>
+      <h1 style="margin-top: 12%; font-size: 40px; font-weight: 1000;" id="about">Get To Know Me : </h1>
+      <p style=" font-size: 40px;">Hi, my name is Reda. I am a engineering<br> student who loves learning about new<br> technologies and working on challenging <br>projects.<br>I am very motivated to push myself to the limits.</p>
+    </div>
+  </div>
+  <div style="text-align: center; color: black;">
+    <h1 style="margin-top: 20%;" id="contact">Contact Me In :</h1>
+    <p class="icon" style="font-size: 40px;"> Facebook : <a href="https://www.facebook.com/redatargaoui/"><i style="font-size: 40px;" class="fa fa-facebook-square" aria-hidden="true"></i></a></p>
+    <p class="icon" style="font-size: 40px;">Instagram : <a href="https://www.instagram.com/reda.targaoui/"><i style="font-size: 40px;" class="fa fa-instagram" aria-hidden="true"></i></a></p>
+    <p class="icon" style="font-size: 40px;">Git Hub : <a href="https://github.com/RedaTargaoui"><i style="font-size: 40px;" class="fa fa-github-square" aria-hidden="true"></i></a></p>
+  </div>
+  <footer style="background-color: black; text-align: center; color: #D1B000;">
+    Copyright © Reda
+  </footer>
+</body>
+</html>
