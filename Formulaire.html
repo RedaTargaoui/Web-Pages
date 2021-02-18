@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<title>Formulaire</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+  header .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header ul{
+    display: inline-flex;
+  }
+  ul li a{
+    margin-left: 40px;
+    margin-top: 400px;
+  }
+  a{
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 430px;
+  }
+  #icon1{
+    transition: 0.5s;
+  }
+  #icon1:hover{
+    font-size: 35px;
+  }
+  #icon2{
+    transition: 0.5s;
+  }
+  #icon2:hover{
+    font-size: 35px;
+  }
+  #icon3{
+    transition: 0.5s;
+  }
+  #icon3:hover{
+    font-size: 35px;
+  }
+  body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  #button {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  header{
+    background: none;
+  }
+  input:focus{
+    outline: none;
+  }
+  input{
+    border-radius: 40px;
+    border-color: white;
+    text-align: center;
+    color: grey;
+  }
+  select{
+    border-radius: 40px;
+    border-color: white;
+    text-align: center;
+    color: grey;
+  }
+  select:focus{
+    outline: none;
+  }
+  #button{
+    border-radius: 10px;
+    padding: 8px 80px;
+    margin-left: 120px;
+    color: white;
+    border: none;
+    transition: 0.5s;
+  }
+  #button:hover{
+    font-size: 20px;
+    padding: 10px 80px;
+  }
+  i{
+    margin-left: 30px;
+    color: #ee7752;
+  }
+  #error-message{
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 1000;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  #Form{
+    padding: 40px 20px;
+    border-radius: 40px;
+    border: none;
+    transition: 0.5s;
+  }
+</style>
+<body>
+  <header>
+    <div class="content">
+      <ul>
+        <li><a id="icon1" href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a id="icon2" href=""><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li><a id="icon3" href=""><i class="fa fa-comment" aria-hidden="true"></i></a></li>
+      </ul>
+    </div> 
+  </header>
+  <form style="padding: 100px 400px;" id="inscription" method="post" onsubmit="return function()">
+    <fieldset id="Form" class="w3-card-4">
+      <p id="valid" style="font-weight: 1000;"></p>
+      <div>
+        <input class="w3-card-4" type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom ">
+        <input class="w3-card-4" style="margin-left: 20px;" type="text" id="name" placeholder="Entrez votre nom ">
+      </div>
+      <div>
+      <br><input class="w3-card-4" type="email" id="email" placeholder="Enrez votre e-mail" onkeydown="validation()">
+      <input class="w3-card-4" style="margin-left: 20px; width: 250px;" type="password" id="mdp" placeholder="Entrez votre mote de passe">
+      </div>
+      <div>
+        <br><input class="w3-card-4" style="width: 300px;" type="tel" id="phone" placeholder="Entrez votre numero de telephone"><br>
+      </div>
+      <div>
+        <br><input class="w3-card-4" type="date" id="naissance" placeholder="Date de naissance">
+        <input class="w3-card-4" style="margin-left: 20px;" type="number" id="age" placeholder="Entrez votre age"s>
+      </div>
+      <div>
+        <br><select class="w3-card-4">
+          <option >Choisis ton pays</option>
+          <option>France</option>
+          <option>England</option>
+          <option>Morocco</option>
+          <option>Germany</option>
+          <option>U.S.A</option>
+        </select>
+        <input class="w3-card-4" style="margin-left: 20px;" type="text" id="Ville" placeholder="Entrez votre Ville">
+      </div>
+      <div>
+          <br><select class="w3-card-4">
+          <option>sexe</option>
+          <option>Masculin</option>
+          <option>Feminin</option>
+          <option>Autres</option>
+        </select><br>
+      </div>
+      <div>
+        <br><label>Quelles formations voulez-vous suivre : </label><br>
+        <input class="w3-card-4"s style="margin-left: 40px;" type="checkbox" name="formations"> Infomatique .<br>
+        <input class="w3-card-4" style="margin-left: 40px;" type="checkbox" name="formations"> Gestion des entrepries .<br>
+        <input class="w3-card-4" style="margin-left: 40px;" type="checkbox" name="formations"> Genie electrique .<br>
+        <input class="w3-card-4" style="margin-left: 40px;" type="checkbox" name="formations"> E-commerce .<br>
+        <input class="w3-card-4" style="margin-left: 40px;" type="checkbox" name="formations"> Communication et reseau .<br>
+      </div>
+      <div>
+        <br><label>Je suis : </label><br>
+        <input class="w3-card-4" style="margin-left: 40px;" type="radio" name="type"> Etudiant/etudiante .<br>
+        <input class="w3-card-4" style="margin-left: 40px;" type="radio" name="type"> Chef d'entrepries .<br>
+        <input class="w3-card-4" style="margin-left: 40px;" type="radio" name="type"> Autres.<br>
+      </div>
+      <div>
+        <br><input class="w3-card-4" type="checkbox" id="robot"> Je ne suis pas un robot .<br> 
+      </div>
+      <div>
+        <br><input class="w3-card-4" id="button" type="submit" name="valide" value="Envoyer" >.
+        <div id="error-message"></div>
+      </div>
+    </fieldset>
+  </form>
+<script>
+  document.getElementById("inscription").addEventListener("click", function(event){
+  var prenom = document.getElementById("prenom").value;
+  var nom = document.getElementById("name").value;
+  var mail = document.getElementById("email").value;
+  var password = document.getElementById("mdp").value;
+  var  tel = document.getElementById("phone").value;
+  var  age_ = document.getElementById("age").value;
+  if (age_==""){
+    event.preventDefault();
+    document.getElementById("error-message").innerHTML = "Veuillez mettre votre age  ! ";
+  }
+  if (tel==""){
+    event.preventDefault();
+    document.getElementById("error-message").innerHTML = "Veuillez mettre un numero de telephone ! ";
+  }
+  if (password==""){
+    event.preventDefault();
+    document.getElementById("error-message").innerHTML = "Veuillez mettre un mot de passe ! ";
+  }
+  if (mail==""){
+    event.preventDefault();
+    document.getElementById("error-message").innerHTML = "Veuillez mettre un e-mail ! ";
+  }
+  if (nom==""){
+    event.preventDefault();
+    document.getElementById("error-message").innerHTML = "Veuillez mettre un nom ! ";
+  }
+  if (prenom==""){
+    event.preventDefault();
+    document.getElementById("error-message").innerHTML = "Veuillez mettre un prenom ! ";
+  }
+  else {
+    none;
+  }
+  event.preventDefault();
+});
+  function validation(){
+    var v_mail = document.getElementById("email").value;
+    var txt = document.getElementById("valid");
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if ( v_mail.match(pattern)){
+      txt.innerHTML = " Your E-mail addres is valid ";
+      txt.style.color = "#00ff00";
+    }
+    else{
+      txt.innerHTML = "Please enter a valid E-mail ";
+      txt.style.color = "#ff0000";
+    }
+  }
+</script>
+</body>
+</html>
