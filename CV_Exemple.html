@@ -6,21 +6,25 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
+  header{
+    border-bottom: 1px solid lightgrey;
+  }
   header .content{
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  header ul{
+  header #liste{
     display: inline-flex;
   }
-  ul li a{
+  #liste li a{
     margin-left: 40px;
     margin-right: 40px;
   }
   a{
     text-decoration: none;
     font-size: 20px;
+    font-weight: 1000;
     color: #D1B000
     background-color: black
     background: linear-gradient(to right, black  50%, #D1B000 50%);
@@ -34,18 +38,18 @@
     color: white;
     padding: 8px 10px;
   }
-  ul{
+  #liste{
     list-style: none;
   }
   #title{
     margin-left: 100px;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 1000;
     color: black;
   }
   #banner{
     height: 100vh;
-    background-image: url(https://www.pce.uw.edu/getmedia/51bd8134-1a06-4958-a126-0d47ea2840f4/hot-job-embedded-software-engineer-header.jpg;;.aspx;.html;.htm;.css;.pdf?width=&height=);
+    background-image: url(https://images8.alphacoders.com/398/thumb-1920-398120.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -55,7 +59,7 @@
     width: 0px;
     height: 4px;
     display: block;
-    background: white;
+    background: #2F4F4F;
     transition: 300ms;
   }
   .icon:hover::after {
@@ -98,86 +102,110 @@
     margin-left: 0%;
     width: 100%;
   }
+  input:focus{
+    outline: none;
+  }
+  textarea:focus{
+    outline: none;
+  }
+  #formtitle::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    display: block;
+    background: white;
+    transition: 300ms;
+  }
+  #formtitle:hover::after {
+    margin-left: 0%;
+    width: 38%;
+  }
 </style>
 <body class="w3-light-grey">
-  <header class="w3-white" style="position: fixed; width: 100%;">
+  <header style="position: fixed; width: 100%; padding: 0px 0px;">
     <div class="content">
       <p id="title">TARGAOUI soufian</p>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Portoflio</a></li>
-        <li><a href="">Contact</a></li>
+      <ul id="liste">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#portoflio">Portoflio</a></li>
+        <li><a href="#conatct">Contact</a></li>
       </ul>
     </div> 
   </header>
-  <div id="banner" class="w3-text-white">
-    <p style="margin-left: 45%; margin-top: 0px; font-size: 40px; font-weight: 1000;"><br>Welcome <br><br>Bienvenue</p>
+
+
+  <div id="banner" style="color: #2F4F4F;" id="top">
+    <p style="margin-left: 45%; margin-top: 0px; padding-top: 60px; font-size: 40px; font-weight: 1000;"><br>Welcome<br></p>
     <p class="icon" style="margin-left: 50%; margin-top: 25px; font-size: 30px;"><i class="fa fa-github" aria-hidden="true"></i> Targaoui soufian</p>
     <p class="icon" style="margin-left: 50%; font-size: 30px;"><i class="fa fa-envelope" aria-hidden="true"></i> Targaoui soufian</p>
     <p class="icon" style="margin-left: 50%; font-size: 30px;"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Targaoui soufian</p>
   </div>
-  <div style="margin-top: 80px;">
-    <p><br><br></p>
+
+
+  <div style="margin-top: 80px; padding: 130px 4px;">
     <img src="https://bouhmid-zakaria.web.app/img/emb.jpg" style="width: 35%; margin-left: 15%; float: left;margin-top: 10px; margin-right: 20px;">
     <div style="display: inline; margin-left: 60%;">
        <h1 class="about" style=" font-size: 60px;">About me</h1>
        <p style=" font-size: 20px; color: grey;">A learn-it-all, thinker, doer.<br>I have passion for embedded <br>systems, mobile and web <br>development, Machine Learning and <br>Artificial Intelligence.<br> <br> <br></p>
        <a style="margin-left: 52%; border-radius: 4px; padding: 8px 20px; border: 1px solid lightgrey; " href="#About">Read More</a>
-       <p><br></p>
     </div>
- <p><br><br><br></p>
   </div>
-  <div style="background-color: #2B3856;">
-    <p><br></p>
+
+
+  <div style="background-color: #2B3856; padding: 250px 4px;">
     <h1 style="margin-left: 35%; ">My preferred quote</h1>
     <h1 style="margin-left: 15%;">“Anyone who has never made a mistake has never tried</h1>
     <h1 style="margin-left: 38%;">anything new.”</h1>
     <h1 style="margin-left: 38%;">Albert Einstein</h1>
-    <p><br></p>
   </div>
-  <div>
-    <p><br><br><br></p>
+
+
+  <div style="padding: 200px 4px;" id="portoflio">
     <img style="border-radius: 50%; margin-left: 10%; height: 500px; float: left;" src="https://media-exp1.licdn.com/dms/image/C5603AQEnGMofSqsyYw/profile-displayphoto-shrink_200_200/0/1574884722986?e=1614816000&v=beta&t=jRd77j77WMczfpw-ZaGmipAZGzKUPlWNiWo-BSs89XI">
     <div style="display: inline;" id="About">
       <h1 style="margin-left: 52%; margin-top: 60px;" class="get_know">Get To Know Me</h1>
       <p style="color: grey; margin-left: 52%; font-size: 20px;">Hi, my name is Soufian. I am a engineering<br> student who loves learning about new<br> technologies and working on challenging<br>projects.<br>I am very motivated to push myself to the<br> limits.<br><br><a style=" border-radius: 4px; padding: 8px 20px; border: 1px solid lightgrey;" href="file:///C:/Users/admin/Downloads/CV_Soufian_TARGAOUI.pdf">CV En Français</a>
       <a style=" border-radius: 4px; padding: 8px 20px; border: 1px solid lightgrey;" href="file:///C:/Users/admin/Downloads/CV_Soufian_Targaoui%20(1).pdf">CV In English</a></p>
     </div>
-    <p><br><br><br></p>
-    <p><br><br><br></p>
-    <p><br><br><br></p>
   </div>
-  <div style="background-color: #2B3856; height: 100px;">
-    <p><br></p>
+
+
+  <div style="background-color: #2B3856; padding: 100px 4px;">
     <h1 class="w3-center" class="exp">Professional Experience : </h1>
   </div>
-  <div>
-    <p><br><br><br></p>
+
+
+  <div style="padding: 200px 4px;">
     <h1 style="margin-left: 15%;">July-August 2019 | Internship<br> observation at Ministry of energy<br> and mines and environment,<br> Rabat, Morocco</h1>
     <p style="margin-left: 15%;">Subject : Design and development of a<br> solution for monitoring the activities of the<br> DR/DP</p>
-    <p><br><br><br></p>
+    <ul style="margin-left: 17%;">
+      <li>Languages and tools : C#, Framework .NET, ASP .NET, SQL Server</li>
+      <li>Team work of four people</li>
+      <li>Observation of the work methodology</li>
+    </ul>
   </div>
-  <div style="background-color: #2B3856; color: white;" >
-    <p><br><br><br><br><br><br><br><br><br></p>
-    <h3 style="margin-left: 35%;">Feel Free to tell me anything</h3>
-    <div style="margin-left: 30%;">
-       <p>Your Name : </p>
-       <input style="width: 45%; border-radius: 4px;" type="Username">
-       <p><br><br></p>
+
+<form>
+  <div style="background-color: #2B3856; color: white; padding: 150px 4px;" id="conatct" >
+    <h3 style="margin-left: 40%;" id="formtitle">Feel free to tell me anything</h3>
+    <div style="padding: 18px 0px;">
+      <p style="margin-left: 42%; font-size: 20px; font-weight: 1000;">Your name</p>
+      <input type="text" name="name" id="name" style="width: 29%; border-radius: 20px; margin-left: 40%; height: 40px; border-color: #29B7F5;">
     </div>
-    <div style="margin-left: 30%;">
-      <p>Your E-Mail : </p>
-      <input style="width: 45%; border-radius: 4px;" type="Username">
-      <p><br><br></p>
+    <div style="padding: 18px 0px;">
+      <p style="margin-left: 42%; font-size: 20px; font-weight: 1000;">Your e-mail</p>
+      <input type="email" name="name" id="email" style="width: 29%; border-radius: 20px; margin-left: 40%; height: 40px; border-color: #29B7F5;">
     </div>
-    <div style="margin-left: 30%;">
-      <p>Your Message : </p>
-      <input style="width: 45%; height: 160px; border-radius: 4px;" type="Username">
-      <p><br></p>
+    <div style="padding: 18px 0px;">
+      <p style="margin-left: 42%; font-size: 20px; font-weight: 1000;">Your message</p>
+      <textarea style="margin-left: 40%; border-radius: 20px; border-color: #29B7F5;" rows="5" cols="40"></textarea>
     </div>
-    <a style="border-radius: 3px; background-color: blue; color: white; margin-left: 30%; padding: 8px 192px;" href="">Send</a>
-    <p><br><br><br><br></p>
+    <div style="padding: 18px 0px;">
+      <input type="submit" name="button" id="send1" value="Send" style="margin-left: 40%; border-radius: 20px; background-color: #1F9CD3; border-color: #1F9CD3; padding: 8px 170px; color: white;">
+    </div>
   </div>
+</form>
+
   <footer>
     <h3 class="w3-center w3-text-grey">TARGAOUI Soufian © 2021</h3>
   </footer>
