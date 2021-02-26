@@ -7,17 +7,20 @@
 </head>
 <style>
   body{
-    background-color: #DCDCDC;
+    background-color: white;
+    color: black;
   }
   h1{
     text-align: center;
     font-weight: 1000;
+    transition: 0.9s;
   }
   h5{
     text-align: center;
     line-height: 70px;
     font-size: 25px;
     font-weight: 500;
+    transition: 0.9s;
   }
   #contenu{
     border: 1px solid grey;
@@ -26,11 +29,13 @@
     width: 75%;
     float: right;
     display: block;
-    background-color: white;
+  }
+  p{
+    transition: 0.9s;
   }
   p:first-letter{
     font-size: 20px;
-    color: red;
+    color: #FFA500;
   }
   #button{
     border-radius: 4px;
@@ -42,9 +47,9 @@
     transition: 0.5s;
   }
   #button:hover{
-    background-color: black;
+    background-color: #FFA500;
     color: white;
-    border-color: black;
+    border-color: #FFA500;
   }
   #notes{
     text-align: center;
@@ -60,17 +65,15 @@
     margin-left: 20px;
     display: block;
     padding: 8px 0px;
-    background-color: white;
   }
   a{
     text-decoration: none;
-    color: black;
     font-size: 25px;
     transition: 0.5s;
   } 
   a:hover{
     margin-left: 10px;
-    color: grey;
+    color:  #FFA500;
   }
   i{
     margin-right: 10px;
@@ -92,11 +95,10 @@
     padding: 1px 40px;
     font-size: 25px;
     transition: 0.5s;
-    -webkit-appearance: none;
   }
   summary:hover{
     margin-left: 10px;
-    color: grey;
+    color:  #FFA500;
   }
   #det1{
     border-top: 1px solid black;
@@ -113,15 +115,26 @@
   input:focus{
     outline: none;
   }
+  button:focus{
+    outline: none;
+  }
+  .dark-mode{
+    background-color: black;
+    color: white;
+  }
 </style>
 <body>
   <h1>Welccome to our quiz website  </h1>
   <h5>Try to complete the quiz and get the most possible grad  </h5>
   <div id="sidebar" class="w3-card-4">
+    <div style="border-bottom: 1px solid black; padding: 15px 100px;">
+      <button style="border-radius: 60%; padding: 5px 5px; background-color: #FFA500; color: white; border-color: #FFA500;"><i style="font-size: 20px; text-align: center;" class="fa fa-search" aria-hidden="true"></i></button>
+      <button style="border-radius: 60%; padding: 5px 5px; background-color: #FFA500; color: white; border-color: #FFA500;" onclick="myFunction()"><i style="font-size: 20px; text-align: center;" class="fa fa-moon-o" aria-hidden="true"></i></button>  
+    </div>
     <p id="side1"><a href=""><i style="font-size: 18px;" class="fa fa-play" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i> Home</a></p>
     <p id="side2"><a href=""><i style="font-size: 18px;" class="fa fa-play" aria-hidden="true"></i><i class="fa fa-question-circle" aria-hidden="true"></i> About us</a></p>
     <p id="side3"><details>
-      <summary><i class="fa fa-comments" aria-hidden="true"></i> Contact</summary>
+    <summary><i class="fa fa-comments" aria-hidden="true"></i> Contact</summary>
       <p id="det1"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></p>
       <p id="det2"><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></p>
       <p id="det3"><a href=""><i class="fa fa-github" aria-hidden="true"></i> Github</a></p>
@@ -166,6 +179,10 @@
         count = count + 0 ;
       }
       note_.innerHTML = "Your mark is : " + count;
+    }
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
     }
   </script>
 </body>
