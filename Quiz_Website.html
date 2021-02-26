@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Website</title>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<style>
+  body{
+    background-color: #DCDCDC;
+  }
+  h1{
+    text-align: center;
+    font-weight: 1000;
+  }
+  h5{
+    text-align: center;
+    line-height: 70px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  #contenu{
+    border: 1px solid grey;
+    border-radius: 40px;
+    padding: 18px 4px;
+    width: 75%;
+    float: right;
+    display: block;
+    background-color: white;
+  }
+  p:first-letter{
+    font-size: 20px;
+    color: red;
+  }
+  #button{
+    border-radius: 4px;
+    padding: 4px 25px;
+    background-color: white;
+    color: black;
+    margin-left: 46%;
+    outline: none;
+    transition: 0.5s;
+  }
+  #button:hover{
+    background-color: black;
+    color: white;
+    border-color: black;
+  }
+  #notes{
+    text-align: center;
+    color: red;
+    font-weight: 500;
+    font-size: 20;
+  }
+  #sidebar{
+    border: 1px solid grey;
+    border-radius: 40px;
+    width: 22%;
+    float: left;
+    margin-left: 20px;
+    display: block;
+    padding: 8px 0px;
+    background-color: white;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    transition: 0.5s;
+  } 
+  a:hover{
+    margin-left: 10px;
+    color: grey;
+  }
+  i{
+    margin-right: 10px;
+    font-size: 25px;
+  }
+  #side1{
+    border-bottom: 1px solid black;
+    padding: 15px 40px;
+  }
+  #side2{
+    border-bottom: 1px solid black;
+    padding: 15px 40px;
+  }
+  #side3{
+    padding: 1px 40px;
+  }
+  summary{
+    outline: none;
+    padding: 1px 40px;
+    font-size: 25px;
+    transition: 0.5s;
+    -webkit-appearance: none;
+  }
+  summary:hover{
+    margin-left: 10px;
+    color: grey;
+  }
+  #det1{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 15px 50px;
+  }
+  #det2{
+    border-bottom: 1px solid black;
+    padding: 8px 50px;
+  }
+  #det3{
+    padding: 1px 50px;
+  }
+  input:focus{
+    outline: none;
+  }
+</style>
+<body>
+  <h1>Welccome to our quiz website  </h1>
+  <h5>Try to complete the quiz and get the most possible grad  </h5>
+  <div id="sidebar" class="w3-card-4">
+    <p id="side1"><a href=""><i style="font-size: 18px;" class="fa fa-play" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i> Home</a></p>
+    <p id="side2"><a href=""><i style="font-size: 18px;" class="fa fa-play" aria-hidden="true"></i><i class="fa fa-question-circle" aria-hidden="true"></i> About us</a></p>
+    <p id="side3"><details>
+      <summary><i class="fa fa-comments" aria-hidden="true"></i> Contact</summary>
+      <p id="det1"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></p>
+      <p id="det2"><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></p>
+      <p id="det3"><a href=""><i class="fa fa-github" aria-hidden="true"></i> Github</a></p>
+    </details></p>
+  </div>
+  <div id="contenu" class="w3-card-4">
+    <ol> Complete with the right tenses : 
+      <li><p>Andy is tired because he (work) <input type="text" id="f1"> all day .</p></li>
+      <li><p>By 1960 most of Britain’s old colonies (become) <input type="text" id="f2"> independent.</p></li>
+      <li><p>How many people (die) <input type="text" id="f3"> in the fire yesterday ?</p></li>
+      <li><p>She was cooking dinner when we (arrive) <input type="text" id="f4"> .</p></li>
+      <li><p>We can use the car, I (repair) <input type="text" id="f5"> it .</p></li>
+    </ol>
+    <input class="w3-card-4" type="submit" id="button" value="Done" onclick="note()">
+    <p id="notes"></p>
+  </div>
+  <script>
+    function note(){
+      var input1 = document.getElementById("f1").value;
+      var input2 = document.getElementById("f2").value;
+      var input3 = document.getElementById("f3").value;
+      var input4 = document.getElementById("f4").value;
+      var input5 = document.getElementById("f5").value;
+      var note_ = document.getElementById("notes");
+      var count = 0;
+      if ( input5 == "have repaired"){
+        count = count + 1 ;
+      }
+      if ( input4 == "arrived"){
+        count = count + 1 ; 
+      }
+      if ( input3 == "died"){
+        count = count + 1 ;
+      }
+      if ( input2 == "had become"){
+        count = count + 1 ;
+      }
+      if ( input1 == "had been working"){
+        count = count + 1 ;
+      }
+      else {
+        count = count + 0 ;
+      }
+      note_.innerHTML = "Your mark is : " + count;
+    }
+  </script>
+</body>
+</html>
